@@ -18,15 +18,15 @@ int search(int *arr,int si,int ei,int tar){
     }
     if(arr[si]<=arr[mid]){
         if(arr[si]<=tar && tar<=arr[mid]){
-            search(arr,si,mid-1,tar);
+            return search(arr,si,mid-1,tar);
         }else{
-            search(arr,mid+1,ei,tar);
+            return search(arr,mid+1,ei,tar);
         }
     }else{
         if(arr[mid]<=tar && tar<=arr[ei]){
-            search(arr,mid+1,ei,tar);
+            return search(arr,mid+1,ei,tar);
         }else{
-            search(arr,si,mid-1,tar);
+            return search(arr,si,mid-1,tar);
         }
     }
 
