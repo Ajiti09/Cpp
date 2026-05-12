@@ -6,7 +6,7 @@ void merge(int *arr,int si,int ei,int mid){
     int i=si;
     int j=mid+1;
     while(i<=mid && j<=ei){
-        if(arr[i]<=arr[j]){
+        if(arr[i]>=arr[j]){
             temp.push_back(arr[i++]);
         }else{
             temp.push_back(arr[j++]);
